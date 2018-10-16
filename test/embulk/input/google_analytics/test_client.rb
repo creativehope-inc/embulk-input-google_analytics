@@ -94,6 +94,10 @@ module Embulk
                 metrics: [
                   {expression: "ga:visits"}, {expression: "ga:pageviews"}
                 ],
+                segments: [
+                  {"id"=>"hoge"}, {"id"=>"fuga"}
+                ],
+                filters_expression: "ga:source=example.com",
                 include_empty_rows: true,
                 page_size: 10000
               }
@@ -111,7 +115,12 @@ module Embulk
                 ],
                 metrics: [
                   {expression: "ga:visits"}, {expression: "ga:pageviews"}
+
                 ],
+                segments: [
+                  {"id"=>"hoge"}, {"id"=>"fuga"}
+                ],
+                filters_expression: "ga:source=example.com",
                 include_empty_rows: true,
                 page_size: 10000,
                 page_token: 123
@@ -137,6 +146,10 @@ module Embulk
                 metrics: [
                   {expression: "ga:visits"}, {expression: "ga:pageviews"}
                 ],
+                segments: [
+                  {"id"=>"hoge"}, {"id"=>"fuga"}
+                ],
+                filters_expression: "ga:source=example.com",
                 include_empty_rows: true,
                 page_size: 10000,
                 date_ranges: [

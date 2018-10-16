@@ -184,6 +184,8 @@ module Embulk
             view_id: view_id,
             dimensions: [{name: task["time_series"]}] + task["dimensions"].map{|d| {name: d}},
             metrics: task["metrics"].map{|m| {expression: m}},
+            segments: task["segments"],
+            filters_expression: task["filters_expression"],
             include_empty_rows: true,
             page_size: preview? ? 10 : 10000,
           }

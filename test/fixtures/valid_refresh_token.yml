@@ -5,12 +5,15 @@ in:
   client_secret: "your_client_secret_here"
   view_id: 101111111
   time_series: "ga:dateHour"
- 
   dimensions:
     - "ga:browser"
   metrics:
     - "ga:visits"
     - "ga:pageviews"
+  segments:
+    - "hoge"
+    - "fuga"
+  filters_expression: ga:source=example.com
   retry_limit: 2
   retry_initial_wait_sec: 0
 
